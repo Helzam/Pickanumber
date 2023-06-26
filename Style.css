@@ -1,0 +1,8 @@
+.my-element {
+    width: 200px; /* Set the width */
+    height: 100px; /* Set the height */
+    position: relative; right:  /* Set the positioning method */
+    top: ; /* Position the element 20 pixels from the top */
+    left: ; /* Position the element 50 pixels from the left */
+        float: :right;
+  }

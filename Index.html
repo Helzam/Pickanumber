@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anime Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .question {
+      margin-bottom: 10px;
+    }
+
+    .options label {
+      display: block;
+    }
+
+    #submit-btn {
+      margin-top: 10px;
+    }
+
+    #result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+
+  <ul>
+
+<li><a href="Instructions.html">Instructions</a></li>
+
+
+
+
+  </ul>
+</head>
+<body>
+  <h1 style="font-size: 300%;">Anime Quiz</h1><br>
+
+  <div id="quiz">
+    <div class="question">
+      <p>1. Who is the main character in "One Piece"?</p>
+      <div class="options">
+        <label>
+          <input type="radio" name="q1" value="a"> a) Luffy
+        </label>
+        <label>
+          <input type="radio" name="q1" value="b"> b) Naruto
+        </label>
+        <label>
+          <input type="radio" name="q1" value="c"> c) Ichigo
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>2. Which anime features a character named "Goku"?</p>
+      <div class="options">
+        <label>
+          <input type="radio" name="q2" value="a"> a) Dragon Ball
+        </label>
+        <label>
+          <input type="radio" name="q2" value="b"> b) Attack on Titan
+        </label>
+        <label>
+          <input type="radio" name="q2" value="c"> c) My Hero Academia
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>3. Who is the protagonist of "Death Note"?</p>
+      <div class="options">
+        <label>
+          <input type="radio" name="q3" value="a"> a) Light Yagami
+        </label>
+        <label>
+          <input type="radio" name="q3" value="b"> b) Monkey D. Luffy
+        </label>
+        <label>
+          <input type="radio" name="q3" value="c"> c) Eren Yeager
+        </label>
+      </div>
+
+      <div style="float: right;width: 50%;height: 70%;"><img src="Images\Onepeicecrew.jpg" alt="Once piece family"></div>
+    </div>
+
+    <button id="submit-btn" onclick="checkAnswers()">Submit</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      var score = 0;
+
+      var q1Answer = document.querySelector('input[name="q1"]:checked');
+      var q2Answer = document.querySelector('input[name="q2"]:checked');
+      var q3Answer = document.querySelector('input[name="q3"]:checked');
+
+      if (q1Answer && q1Answer.value === "a") {
+        score++;
+      }
+
+      if (q2Answer && q2Answer.value === "a") {
+        score++;
+      }
+
+      if (q3Answer && q3Answer.value === "a") {
+        score++;
+      }
+
+      var result = document.getElementById("result");
+      result.textContent = "Your score: " + score + "/3";
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+  <footer> <p>&copy; 2023 My Company. All rights reserved.</p></footer>
+</body>
+</html>
